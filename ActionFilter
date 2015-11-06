@@ -1,0 +1,133 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qa.cloudio.io:8082/" />
+<title>Action Filter</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Action Filter</td></tr>
+</thead><tbody>
+<!--Store past rows count-->
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'x-grid3')]/div[contains(@class,'x-grid3-body')]/div[contains(@class,'x-grid3-row')]</td>
+	<td>pastrows</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${pastrows}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;Anil&quot;</td>
+	<td>filter</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${filter}</td>
+	<td></td>
+</tr>
+<!--Navigate to Filter field-->
+<tr>
+	<td>mouseOver</td>
+	<td>//div[contains(@class,'x-grid3-hd-firstname')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[contains(@class,'x-grid3-hd-firstname')]/a[contains(@class,'x-grid3-hd-btn')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//span[contains(text(),'Filters')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div/ul[contains(@class,'dropdown-menu b-menu-list')]/li[8][contains(@class,'x-menu-list-item-indent')]/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div/ul[contains(@class,'dropdown-menu b-menu-list')]/li[8][contains(@class,'x-menu-list-item-indent')]/div/input</td>
+	<td>${filter}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div/ul/li[6]/a[contains(@class,'x-menu-check-item')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'x-grid3')]/div[contains(@class,'x-grid3-body')]/div[contains(@class,'x-grid3-row')]</td>
+	<td>newrows</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${newrows}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>500</td>
+</tr>
+<tr>
+	<td>assertExpression</td>
+	<td>javascript{storedVars['newrows'] != storedVars['pastrows']}</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[contains(text(),'Clear Filter')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>2000</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'x-grid3')]/div[contains(@class,'x-grid3-body')]/div[contains(@class,'x-grid3-row')]</td>
+	<td>afterclear</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${afterclear}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

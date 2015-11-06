@@ -1,0 +1,67 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qa.cloudio.io:8082/" />
+<title>Action Copy</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Action Copy</td></tr>
+</thead><tbody>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>444888777666</td>
+	<td>numbervalue</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${numbervalue}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@id='c-78c99b836b4f487c92110f263d6ef68c-field1-input']</td>
+	<td>${numbervalue}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//button[contains(text(),'Copy')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>//input[@id='c-78c99b836b4f487c92110f263d6ef68c-field2-input']</td>
+	<td>numbervalue2</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${numbervalue2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>//input[@id='c-78c99b836b4f487c92110f263d6ef68c-field2-input']</td>
+	<td>${numbervalue}</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

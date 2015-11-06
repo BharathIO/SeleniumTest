@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="Login">Login</a></td></tr>
+<tr><td><a href="NavigatingToPage">Navigating To Page</a></td></tr>
+<tr><td><a href="ActionQuery">Action Query</a></td></tr>
+<tr><td><a href="ActionSort">ActionSort</a></td></tr>
+<tr><td><a href="ActionFilter">Action Filter</a></td></tr>
+<tr><td><a href="ActionHideColumns">Action Hide Columns</a></td></tr>
+<tr><td><a href="ActionShowColumns">Action Show Columns</a></td></tr>
+<tr><td><a href="ActionClearDatasource">Action Clear Datasource</a></td></tr>
+<tr><td><a href="ActionSetHeading">Action Set Heading</a></td></tr>
+<tr><td><a href="ActionSetColumnHeading">Action Set Column Heading</a></td></tr>
+<tr><td><a href="ActionInsert">Action Insert</a></td></tr>
+<tr><td><a href="ActionCopy">Action Copy</a></td></tr>
+<tr><td><a href="ActionSetEnable">Action Set Enable</a></td></tr>
+<tr><td><a href="ActionHideShow">Action Hide Show</a></td></tr>
+<tr><td><a href="ActionNew">Action New</a></td></tr>
+</tbody></table>
+</body>
+</html>

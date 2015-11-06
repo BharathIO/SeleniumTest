@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qa.cloudio.io:8082/" />
+<title>ActionSetInsertAllowed-False</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ActionSetInsertAllowed-False</td></tr>
+</thead><tbody>
+<tr>
+	<td>click</td>
+	<td>//button[contains(text(),'Clear Datasource')]</td>
+	<td></td>
+</tr>
+<!--Choose False from button group-->
+<tr>
+	<td>click</td>
+	<td>//button[contains(text(),'Set Insert')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//div[contains(@class,'b-menu')]/ul/li[1]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[contains(@class,'b-menu')]/ul/li[1]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>//input[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-field1-input')]</td>
+	<td>true</td>
+</tr>
+</tbody></table>
+</body>
+</html>

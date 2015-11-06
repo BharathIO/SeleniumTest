@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qa.cloudio.io:8082/" />
+<title>Touch Record</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Touch Record</td></tr>
+</thead><tbody>
+<tr>
+	<td>pause</td>
+	<td>200</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-countries')]//button[contains(text(),'Refresh')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-row3')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-countries')]//div[contains(@class,'x-grid3')]/div[contains(@class,'x-grid3-body')]/div[contains(@class,'x-grid3-dirty-row')]</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>200</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-countries')]/div/div[contains(@class,'x-panel-body')]/div/div/div/div//div[contains(@class,'x-grid3-body')]/div[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[contains(text(),'Touch Record')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-row3')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-countries')]//div[contains(@class,'x-grid3')]/div[contains(@class,'x-grid3-body')]/div[contains(@class,'x-grid3-dirty-row')]</td>
+	<td>dirtyrows</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${dirtyrows}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>javascript{storedVars['dirtyrows']}</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>200</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-countries')]//button[contains(text(),'Refresh')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>200</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[contains(text(),'Yes')]</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

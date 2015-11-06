@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qa.cloudio.io:8082/" />
+<title>Login</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">LoginD</td></tr>
+</thead><tbody>
+
+<tr>
+	<td>open</td>
+	<td>http://qa.cloudio.io:8082/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Sign In</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=username-input</td>
+	<td>bharath</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//*[@id='password-input']</td>
+	<td>bharath</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//*[contains(text(),'Sign In')]</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

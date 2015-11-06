@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qa.cloudio.io:8082/" />
+<title>Action Set Column Heading</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Action Set Column Heading</td></tr>
+</thead><tbody>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>2000</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[contains(@class,'x-grid3-hd-firstname')]/span</td>
+	<td>oldheading</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${oldheading}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-buttons')]/table/tbody/tr[1]/td[2]//td[2]//button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[contains(@class,'x-grid3-hd-firstname')]/span</td>
+	<td>newheading</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${newheading}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertExpression</td>
+	<td>javascript{storedVars['oldheading'] != storedVars['newheading']}</td>
+	<td>true</td>
+</tr>
+</tbody></table>
+</body>
+</html>

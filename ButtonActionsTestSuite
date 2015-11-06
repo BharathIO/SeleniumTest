@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="Login">Login</a></td></tr>
+<tr><td><a href="NavigatingToPage">Navigating To Page</a></td></tr>
+<tr><td><a href="ActionRefresh">ActionRefresh</a></td></tr>
+<tr><td><a href="ActionClear">ActionClear</a></td></tr>
+<tr><td><a href="ActionGoToRecord">ActionGoToRecord</a></td></tr>
+<tr><td><a href="ClearCurrentRecord">ClearCurrentRecord</a></td></tr>
+<tr><td><a href="ActionDelete">ActionDelete</a></td></tr>
+<tr><td><a href="ActionDuplicate">ActionDuplicate</a></td></tr>
+<tr><td><a href="Delete">Delete</a></td></tr>
+<tr><td><a href="ActionSetHeight">ActionSetHeight</a></td></tr>
+<tr><td><a href="ActionSetWidth">ActionSetWidth</a></td></tr>
+<tr><td><a href="ActionSetUpdateAllowed-False">ActionSetUpdateAllowed-False</a></td></tr>
+<tr><td><a href="ActionSetUpdateAllowed-True">ActionSetUpdateAllowed-True</a></td></tr>
+<tr><td><a href="ActionSetInsertAllowed-False">ActionSetInsertAllowed-False</a></td></tr>
+<tr><td><a href="ActionSetInsertAllowed-True">ActionSetInsertAllowed-True</a></td></tr>
+<tr><td><a href="Save">Save</a></td></tr>
+<tr><td><a href="Touch Record">Touch Record</a></td></tr>
+<tr><td><a href="TouchAllRecords">TouchAllRecords</a></td></tr>
+<tr><td><a href="ResetRecord">ResetRecord</a></td></tr>
+</tbody></table>
+</body>
+</html>

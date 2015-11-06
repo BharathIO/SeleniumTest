@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qa.cloudio.io:8082/" />
+<title>Save</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Save</td></tr>
+</thead><tbody>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<!--store current time-->
+<tr>
+	<td>store</td>
+	<td>javascript{(new Date().getMinutes()+&quot;:&quot; + new Date().getSeconds() )}</td>
+	<td>time</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>value entered : ${time}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>India - ${time}</td>
+	<td>entered</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${entered}</td>
+	<td></td>
+</tr>
+<!--click on refresh button-->
+<tr>
+	<td>click</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-countries')]//button[contains(text(),'Refresh')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Country Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>2000</td>
+</tr>
+<!--click on country name form field record1-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-row3')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-countries')]//div[contains(@class,'x-grid3')]/div[contains(@class,'x-grid3-body')]/div[1]/table/tbody/tr/td[3]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-row3')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-countries')]//div[contains(@class,'x-grid3')]/div[contains(@class,'x-grid3-body')]/div[1]/table/tbody/tr/td[3]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>2000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-row3')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-countries')]//div[contains(@class,'x-grid3')]//div[contains(@class,'x-grid-editor')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-countryNameInGrid')]/input</td>
+	<td>India - ${time}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-row3')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-countries')]//div[contains(@class,'x-grid3')]/div[contains(@class,'x-grid3-body')]/div[1]/table/tbody/tr/td[3]/div</td>
+	<td>change</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${change}</td>
+	<td></td>
+</tr>
+<!--click on other field for changes get effect-->
+<tr>
+	<td>click</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-row3')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-countries')]//div[contains(@class,'x-grid3')]/div[contains(@class,'x-grid3-body')]/div[2]/table/tbody/tr/td[3]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<!--click on save button-->
+<tr>
+	<td>click</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-countries')]//button[contains(text(),'Save')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<!--refresh to check the effected value-->
+<tr>
+	<td>click</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-countries')]//button[contains(text(),'Refresh')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-row3')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-countries')]//div[contains(@class,'x-grid3')]/div[contains(@class,'x-grid3-body')]/div[1]/table/tbody/tr/td[3]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-row3')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-countries')]//div[contains(@class,'x-grid3')]/div[contains(@class,'x-grid3-body')]/div[1]/table/tbody/tr/td[3]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-row3')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-countries')]//div[contains(@class,'x-grid3')]/div[contains(@class,'x-grid3-body')]/div[1]/table/tbody/tr/td[3]/div</td>
+	<td>newvalue</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>new value : ${newvalue}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>assertExpression</td>
+	<td>javascript{storedVars['entered'] == storedVars['newvalue']}</td>
+	<td>true</td>
+</tr>
+</tbody></table>
+</body>
+</html>

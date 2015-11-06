@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qa.cloudio.io:8082/" />
+<title>Clear Current Record</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Clear Current Record</td></tr>
+</thead><tbody>
+<!--Employees Grid-->
+<!--Store Emp Id before clear-->
+<tr>
+	<td>click</td>
+	<td>//button[contains(text(),'Refresh')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'x-grid3')]/div[contains(@class,'x-grid3-body')]/div[contains(@class,'x-grid3-row-selected')]/table/tbody/tr/td[1]/div[contains(@class,'x-grid3-col-empid')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'x-grid3')]/div[contains(@class,'x-grid3-body')]/div[contains(@class,'x-grid3-row-selected')]/table/tbody/tr/td[1]/div[contains(@class,'x-grid3-col-empid')]</td>
+	<td>beforeclear</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${beforeclear}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<!--Store rows count before clear-->
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'x-grid3')]/div[contains(@class,'x-grid3-body')]/div[contains(@class,'x-grid3-row')]</td>
+	<td>pastrows</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${pastrows}</td>
+	<td></td>
+</tr>
+<!--Click on clear current record-->
+<tr>
+	<td>click</td>
+	<td>//button[contains(text(),'Clear Current')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<!--Store Emp Id after clear-->
+<tr>
+	<td>storeText</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'x-grid3')]/div[contains(@class,'x-grid3-body')]/div[contains(@class,'x-grid3-row-selected')]/table/tbody/tr/td[1]/div[contains(@class,'x-grid3-col-empid')]</td>
+	<td>afterclear</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${afterclear}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<!--Store rows count after clear-->
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'x-grid3')]/div[contains(@class,'x-grid3-body')]/div[contains(@class,'x-grid3-row')]</td>
+	<td>afterrows</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${afterrows}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>assertExpression</td>
+	<td>javascript{storedVars['beforeclear'] != storedVars['afterclear']}</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>assertExpression</td>
+	<td>javascript{storedVars['beforerows'] != storedVars['afterrows']}</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[contains(text(),'Refresh')]</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

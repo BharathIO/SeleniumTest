@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qa.cloudio.io:8082/" />
+<title>Action Clear Sort</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Action Clear Sort</td></tr>
+</thead><tbody>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'ra-grid-header')]/div/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>2000</td>
+</tr>
+<!--Move mouse to Emp Id Sort-->
+<tr>
+	<td>mouseOver</td>
+	<td>//div[contains(@class,'x-grid3-hd-empid')]</td>
+	<td></td>
+</tr>
+<!--Click Sort Descending-->
+<tr>
+	<td>clickAt</td>
+	<td>//div[contains(@class,'x-grid3-hd-empid')]/a[contains(@class,'x-grid3-hd-btn')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>2000</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Descending</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//span[contains(text(),'Descending')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[contains(text(),'Descending')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<!--store value after descending-->
+<!--<tr>
+	<td>clickAt</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'x-grid3')]/div[contains(@class,'x-grid3-body')]/div[contains(@class,'x-grid3-row-selected')]/table/tbody/tr/td[1]/div</td>
+	<td></td>
+</tr>-->
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Emp Id</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>5000</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'x-grid3')]/div[contains(@class,'x-grid3-body')]/div[contains(@class,'x-grid3-row-selected')]/table/tbody/tr/td[1]/div</td>
+	<td>afterdesc</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Emp Id after desc : ${afterdesc}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>javascript{storedVars['afterdesc'] != null}</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>1000</td>
+</tr>
+<!--Clearing Sort-->
+<tr>
+	<td>click</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'ra-grid-header')]/div/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Emp Id</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>5000</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'x-grid3')]/div[contains(@class,'x-grid3-body')]/div[contains(@class,'x-grid3-row-selected')]/table/tbody/tr/td[1]/div</td>
+	<td>afterclear</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Emp Id after clear :&nbsp;&nbsp;${afterclear}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertExpression</td>
+	<td>javascript{storedVars['afterclear'] != storedVars['afterdesc']}</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<!--click refresh button-->
+<tr>
+	<td>click</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'ra-grid-header')]/div/table/tbody/tr/td[7]/table/tbody/tr[2]/td[2]/em/button</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
