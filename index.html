@@ -1,0 +1,288 @@
+<html>
+<head><style type='text/css'>
+body, table {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 12;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title {
+    font-style: italic;
+}
+
+.selected {
+    background-color: #ffffcc;
+}
+
+.status_done {
+    background-color: #eeffee;
+}
+
+.status_passed {
+    background-color: #ccffcc;
+}
+
+.status_failed {
+    background-color: #ffcccc;
+}
+
+.breakpoint {
+    background-color: #cccccc;
+    border: 1px solid black;
+}
+</style><title>Test suite results</title></head>
+<body>
+<h1>Test suite results </h1>
+
+<table>
+<tr>
+<td>result:</td>
+<td>failed</td>
+</tr>
+<tr>
+<td>totalTime:</td>
+<td>3</td>
+</tr>
+<tr>
+<td>numTestTotal:</td>
+<td>3</td>
+</tr>
+<tr>
+<td>numTestPasses:</td>
+<td>2</td>
+</tr>
+<tr>
+<td>numTestFailures:</td>
+<td>1</td>
+</tr>
+<tr>
+<td>numCommandPasses:</td>
+<td>0</td>
+</tr>
+<tr>
+<td>numCommandFailures:</td>
+<td>0</td>
+</tr>
+<tr>
+<td>numCommandErrors:</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Selenium Version:</td>
+<td>2.40</td>
+</tr>
+<tr>
+<td>Selenium Revision:</td>
+<td>.0</td>
+</tr>
+<tr>
+<td>
+<table id="suiteTable" class="selenium" border="1" cellpadding="1" cellspacing="1"><tbody>
+<tr class="title status_failed"><td><b>Test Suite</b></td></tr>
+<tr class="  status_passed"><td><a href="#testresult0">Login</a></td></tr>
+<tr class="  status_passed"><td><a href="#testresult1">Navigating To Page</a></td></tr>
+<tr class="  status_failed"><td><a href="#testresult2">ActionRefresh</a></td></tr>
+</tbody></table>
+
+
+</td>
+<td>&nbsp;</td>
+</tr>
+</table><table><tr>
+<td><a name="testresult0">Login</a><br/><div>
+<table border="1" cellpadding="1" cellspacing="1">
+<thead>
+<tr class="title status_passed"><td rowspan="1" colspan="3">LoginD</td></tr>
+</thead><tbody>
+
+<tr class="  status_done" style="cursor: pointer;">
+	<td>open</td>
+	<td>http://qa.cloudio.io:8082/</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>waitForTextPresent</td>
+	<td>Sign In</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>id=username-input</td>
+	<td>bharath</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>//*[@id='password-input']</td>
+	<td>bharath</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>click</td>
+	<td>//*[contains(text(),'Sign In')]</td>
+	<td></td>
+</tr>
+</tbody></table>
+
+
+</div></td>
+<td>&nbsp;</td>
+</tr><tr>
+<td><a name="testresult1">NavigatingToPage</a><br/><div>
+<table border="1" cellpadding="1" cellspacing="1">
+<thead>
+<tr class="title status_passed"><td rowspan="1" colspan="3">Navigation</td></tr>
+</thead><tbody>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>waitForTextPresent</td>
+	<td>Navigation</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>mouseOver</td>
+	<td>//a[contains(.,'igation')]</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>waitForTextPresent</td>
+	<td>Selenium</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>mouseOver</td>
+	<td>//span[contains(text(),'elenium')]</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>mouseOver</td>
+	<td>//span[contains(text(),'Scenario')]</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>click</td>
+	<td>//span[contains(text(),'Scenario')]</td>
+	<td></td>
+</tr>
+</tbody></table>
+
+
+</div></td>
+<td>&nbsp;</td>
+</tr><tr>
+<td><a name="testresult2">ActionRefresh</a><br/><div>
+<table border="1" cellpadding="1" cellspacing="1">
+<thead>
+<tr class="title status_failed"><td rowspan="1" colspan="3">Action Refresh</td></tr>
+</thead><tbody>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<tr class="  status_failed" style="cursor: pointer;">
+	<td>click</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'ra-grid-header')]/div/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button</td>
+	<td>Element&nbsp;//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'ra-grid-header')]/div/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button&nbsp;not&nbsp;found</td>
+</tr>
+<tr class="" style="cursor: pointer;">
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<!--Employees Grid-->
+<tr class="" style="cursor: pointer;">
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<tr class="" style="cursor: pointer;">
+	<td>storeXpathCount</td>
+	<td>//div[contains(@class,'x-grid3-row')]</td>
+	<td>count</td>
+</tr>
+<tr class="" style="cursor: pointer;">
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<tr class="" style="cursor: pointer;">
+	<td>echo</td>
+	<td>${count}</td>
+	<td></td>
+</tr>
+<tr class="" style="cursor: pointer;">
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<tr class="" style="cursor: pointer;">
+	<td>click</td>
+	<td>//button[contains(text(),'Refresh')]</td>
+	<td></td>
+</tr>
+<tr class="" style="cursor: pointer;">
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<tr class="" style="cursor: pointer;">
+	<td>storeXpathCount</td>
+	<td>//div[contains(@class,'x-grid3-row')]</td>
+	<td>newcount</td>
+</tr>
+<tr class="" style="cursor: pointer;">
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<tr class="" style="cursor: pointer;">
+	<td>echo</td>
+	<td>${newcount}</td>
+	<td></td>
+</tr>
+<tr class="" style="cursor: pointer;">
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<tr class="" style="cursor: pointer;">
+	<td>assertExpression</td>
+	<td>javascript{storedVars['newcount'] != storedVars['count']}</td>
+	<td>true</td>
+</tr>
+</tbody></table>
+
+
+</div></td>
+<td>&nbsp;</td>
+</tr></table><pre>
+info: Starting test /selenium-server/tests/Login
+info: Executing: |open | http://qa.cloudio.io:8082/ |  |
+info: Executing: |waitForTextPresent | Sign In |  |
+info: Executing: |type | id=username-input | bharath |
+info: Executing: |type | //*[@id=&apos;password-input&apos;] | bharath |
+info: Executing: |click | //*[contains(text(),&apos;Sign In&apos;)] |  |
+info: Starting test /selenium-server/tests/NavigatingToPage
+info: Executing: |waitForTextPresent | Navigation |  |
+info: Executing: |mouseOver | //a[contains(.,&apos;igation&apos;)] |  |
+info: Executing: |waitForTextPresent | Selenium |  |
+info: Executing: |mouseOver | //span[contains(text(),&apos;elenium&apos;)] |  |
+info: Executing: |mouseOver | //span[contains(text(),&apos;Scenario&apos;)] |  |
+info: Executing: |click | //span[contains(text(),&apos;Scenario&apos;)] |  |
+info: Starting test /selenium-server/tests/ActionRefresh
+info: Executing: |pause |  | 200 |
+info: Executing: |click | //div[contains(@id,&apos;c-78c99b836b4f487c92110f263d6ef68c-main&apos;)]//div[contains(@id,&apos;c-78c99b836b4f487c92110f263d6ef68c-empGrid&apos;)]//div[contains(@class,&apos;ra-grid-header&apos;)]/div/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button |  |
+error: Element //div[contains(@id,&apos;c-78c99b836b4f487c92110f263d6ef68c-main&apos;)]//div[contains(@id,&apos;c-78c99b836b4f487c92110f263d6ef68c-empGrid&apos;)]//div[contains(@class,&apos;ra-grid-header&apos;)]/div/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button not found
+warn: currentTest.recordFailure: Element //div[contains(@id,&apos;c-78c99b836b4f487c92110f263d6ef68c-main&apos;)]//div[contains(@id,&apos;c-78c99b836b4f487c92110f263d6ef68c-empGrid&apos;)]//div[contains(@class,&apos;ra-grid-header&apos;)]/div/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button not found
+</pre></body></html>
