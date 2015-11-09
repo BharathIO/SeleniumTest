@@ -3,7 +3,7 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://qa.cloudio.io:8082/" />
-<title>Action Clear Sort</title>
+<title>Action Sort</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
@@ -15,16 +15,6 @@
 	<td></td>
 	<td>200</td>
 </tr>
-<tr>
-	<td>click</td>
-	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'ra-grid-header')]/div/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td></td>
-	<td>2000</td>
-</tr>
 <!--Move mouse to Emp Id Sort-->
 <tr>
 	<td>mouseOver</td>
@@ -33,7 +23,7 @@
 </tr>
 <!--Click Sort Descending-->
 <tr>
-	<td>clickAt</td>
+	<td>click</td>
 	<td>//div[contains(@class,'x-grid3-hd-empid')]/a[contains(@class,'x-grid3-hd-btn')]</td>
 	<td></td>
 </tr>
@@ -69,19 +59,9 @@
 	<td></td>
 </tr>-->
 <tr>
-	<td>pause</td>
+	<td>waitForElementPresent</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'x-grid3')]/div[contains(@class,'x-grid3-body')]/div[contains(@class,'x-grid3-row-selected')]/table/tbody/tr/td[1]/div</td>
 	<td></td>
-	<td>200</td>
-</tr>
-<tr>
-	<td>waitForTextPresent</td>
-	<td>Emp Id</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td></td>
-	<td>5000</td>
 </tr>
 <tr>
 	<td>storeText</td>
@@ -103,21 +83,16 @@
 	<td></td>
 	<td>1000</td>
 </tr>
-<!--Clearing Sort-->
+<!--Clearing Sort -- click on action clear filter-->
 <tr>
 	<td>click</td>
 	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'ra-grid-header')]/div/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForTextPresent</td>
-	<td>Emp Id</td>
+	<td>waitForElementPresent</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'x-grid3')]/div[contains(@class,'x-grid3-body')]/div[contains(@class,'x-grid3-row-selected')]/table/tbody/tr/td[1]/div</td>
 	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td></td>
-	<td>5000</td>
 </tr>
 <tr>
 	<td>storeText</td>
@@ -142,9 +117,10 @@
 <!--click refresh button-->
 <tr>
 	<td>click</td>
-	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'ra-grid-header')]/div/table/tbody/tr/td[7]/table/tbody/tr[2]/td[2]/em/button</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-buttons')]/table/tbody/tr[2]/td[1]/table/tbody/tr[2]/td[2]//button[contains(text(),'Query')]</td>
 	<td></td>
 </tr>
 </tbody></table>
 </body>
 </html>
+
