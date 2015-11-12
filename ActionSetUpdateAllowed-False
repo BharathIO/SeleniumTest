@@ -3,13 +3,18 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://qa.cloudio.io:8082/" />
-<title>ActionSetUpdateAllowed-True</title>
+<title>ActionSetUpdateAllowed-False</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">ActionSetUpdateAllowed-True</td></tr>
+<tr><td rowspan="1" colspan="3">ActionSetUpdateAllowed-False</td></tr>
 </thead><tbody>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
 <tr>
 	<td>click</td>
 	<td>//button[contains(text(),'Refresh')]</td>
