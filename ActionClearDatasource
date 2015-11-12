@@ -12,16 +12,32 @@
 <tr><td rowspan="1" colspan="3">Action Clear Datasource</td></tr>
 </thead><tbody>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'ra-grid-header')]/div/table/tbody/tr/td[4]/table/tbody/tr[2]/td[2]/em/button</td>
+	<td></td>
+</tr>
+<!--click refresh-->
+<tr>
 	<td>click</td>
-	<td>//button[contains(text(),'Refresh')]</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'ra-grid-header')]/div/table/tbody/tr/td[4]/table/tbody/tr[2]/td[2]/em/button</td>
 	<td></td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td></td>
 	<td>2000</td>
+	<td></td>
 </tr>
 <tr>
+	<td>storeXpathCount</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'x-grid3')]//div[contains(@class,'x-grid3-row')]</td>
+	<td>pastrows</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${pastrows}</td>
+	<td></td>
+</tr>
+<!--<tr>
 	<td>storeValue</td>
 	<td>//input[@id='c-78c99b836b4f487c92110f263d6ef68c-rowcount-input']</td>
 	<td>rowcount</td>
@@ -30,13 +46,14 @@
 	<td>echo</td>
 	<td>${rowcount}</td>
 	<td></td>
-</tr>
+</tr> -->
+<!--click clear datasource-->
 <tr>
 	<td>click</td>
-	<td>//button[contains(text(),'Clear Datasource')]</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'ra-grid-header')]/div/table/tbody/tr/td[7]/table/tbody/tr[2]/td[2]/em/button</td>
 	<td></td>
 </tr>
-<tr>
+<!-- <tr>
 	<td>storeValue</td>
 	<td>//input[@id='c-78c99b836b4f487c92110f263d6ef68c-rowcount-input']</td>
 	<td>newcount</td>
@@ -44,9 +61,23 @@
 <tr>
 	<td>echo</td>
 	<td>${newcount}</td>
+	<td></td> -->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
 	<td></td>
 </tr>
 <tr>
+	<td>storeXpathCount</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'x-grid3')]//div[contains(@class,'x-grid3-row')]</td>
+	<td>newrows</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${newrows}</td>
+	<td></td>
+</tr>
+<!--<tr>
 	<td>storeEval</td>
 	<td>storedVars['newvalue']&nbsp;&nbsp;== null</td>
 	<td></td>
@@ -54,17 +85,21 @@
 <tr>
 	<td>echo</td>
 	<td>${isValid}</td>
-	<td>true</td>
-</tr>
+	<td>true</td>-->
 <tr>
-	<td>storeXpathCount</td>
-	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'x-grid3')]</td>
-	<td>afterclear</td>
+	<td>storeEval</td>
+	<td>(storedVars['newrows'] != storedVars['pastrows']&nbsp;&nbsp;)&amp;&amp; storedVars['newrows'] &lt;=1</td>
+	<td>result</td>
 </tr>
 <tr>
 	<td>echo</td>
-	<td>${afterclear}</td>
+	<td>${result}</td>
 	<td></td>
+</tr>
+<tr>
+	<td>assertExpression</td>
+	<td>javascript{storedVars['result']}</td>
+	<td>true</td>
 </tr>
 </tbody></table>
 </body>
