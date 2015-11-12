@@ -12,8 +12,8 @@
 </thead><tbody>
 <tr>
 	<td>pause</td>
+	<td>5000</td>
 	<td></td>
-	<td>200</td>
 </tr>
 <tr>
 	<td>store</td>
@@ -44,11 +44,11 @@
 <tr>
 	<td>storeText</td>
 	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-row3')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-countries')]//div[contains(@class,'x-grid3')]/div[contains(@class,'x-grid3-body')]/div[2]/table/tbody/tr/td[3]/div[contains(@class,'x-grid3-col-countryNameInGrid')]</td>
-	<td>beforereset</td>
+	<td>inittext</td>
 </tr>
 <tr>
 	<td>echo</td>
-	<td>${beforereset}</td>
+	<td>${inittext}</td>
 	<td></td>
 </tr>
 <tr>
@@ -127,7 +127,7 @@
 </tr>
 <tr>
 	<td>storeEval</td>
-	<td>javascript{storedVars['beforereset'] == storedVars['new']}</td>
+	<td>javascript{storedVars['inittext'] == storedVars['new']}</td>
 	<td></td>
 </tr>
 </tbody></table>

@@ -14,8 +14,8 @@
 <!--Employees Grid-->
 <tr>
 	<td>pause</td>
+	<td>10000</td>
 	<td></td>
-	<td>2000</td>
 </tr>
 <tr>
 	<td>storeXpathCount</td>
@@ -64,8 +64,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForPageToLoad</td>
-	<td></td>
+	<td>pause</td>
+	<td>10000</td>
 	<td></td>
 </tr>
 <tr>

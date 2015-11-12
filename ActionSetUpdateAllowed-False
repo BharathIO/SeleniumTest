@@ -42,8 +42,8 @@
 </tr>
 <tr>
 	<td>pause</td>
+	<td>5000</td>
 	<td></td>
-	<td>200</td>
 </tr>
 <tr>
 	<td>assertNotEditable</td>
