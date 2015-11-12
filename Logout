@@ -25,7 +25,6 @@
 	<td>//*[contains(text(),'Logout')]</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>
