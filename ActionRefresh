@@ -53,9 +53,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
+	<td>waitForPageToLoad</td>
 	<td></td>
-	<td>200</td>
+	<td></td>
 </tr>
 <tr>
 	<td>storeXpathCount</td>
