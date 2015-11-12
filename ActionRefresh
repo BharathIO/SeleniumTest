@@ -15,31 +15,11 @@
 	<td></td>
 	<td>200</td>
 </tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'ra-grid-header')]/div/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'ra-grid-header')]/div/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td></td>
-	<td>200</td>
-</tr>
 <!--Employees Grid-->
 <tr>
-	<td>pause</td>
-	<td></td>
-	<td>200</td>
-</tr>
-<tr>
 	<td>storeXpathCount</td>
-	<td>//div[contains(@class,'x-grid3-row')]</td>
-	<td>count</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'x-grid3')]/div[contains(@class,'x-grid3-body')]/div[contains(@class,'x-grid3-row')]</td>
+	<td>initcount</td>
 </tr>
 <tr>
 	<td>pause</td>
@@ -48,7 +28,7 @@
 </tr>
 <tr>
 	<td>echo</td>
-	<td>${count}</td>
+	<td>${initcount}</td>
 	<td></td>
 </tr>
 <tr>
@@ -69,7 +49,7 @@
 </tr>
 <tr>
 	<td>storeXpathCount</td>
-	<td>//div[contains(@class,'x-grid3-row')]</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'x-grid3')]/div[contains(@class,'x-grid3-body')]/div[contains(@class,'x-grid3-row')]</td>
 	<td>newcount</td>
 </tr>
 <tr>
@@ -88,8 +68,18 @@
 	<td>200</td>
 </tr>
 <tr>
+	<td>storeEval</td>
+	<td>(storedVars['newcount']!= storedVars['initcount'] ) &amp;&amp; (storedVars['newcount'] != 0)</td>
+	<td>condition</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${condition}</td>
+	<td></td>
+</tr>
+<tr>
 	<td>assertExpression</td>
-	<td>javascript{storedVars['newcount'] != storedVars['count']}</td>
+	<td>${condition}</td>
 	<td>true</td>
 </tr>
 </tbody></table>
