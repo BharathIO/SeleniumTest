@@ -15,9 +15,10 @@
 	<td>200</td>
 	<td></td>
 </tr>
+<!--emp grid-->
 <tr>
 	<td>storeElementHeight</td>
-	<td>//div[contains(@class,'x-grid3')]</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'x-grid3')]</td>
 	<td>previousHeight</td>
 </tr>
 <tr>
@@ -47,7 +48,7 @@
 </tr>
 <tr>
 	<td>storeElementHeight</td>
-	<td>//div[contains(@class,'x-grid3')]</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'x-grid3')]</td>
 	<td>newHeight</td>
 </tr>
 <tr>
