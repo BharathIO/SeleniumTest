@@ -17,7 +17,7 @@
 </tr>
 <tr>
 	<td>storeElementWidth</td>
-	<td>//div[contains(@class,'x-grid3')]</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'x-grid3')]</td>
 	<td>previousWidth</td>
 </tr>
 <tr>
@@ -47,7 +47,7 @@
 </tr>
 <tr>
 	<td>storeElementWidth</td>
-	<td>//div[contains(@class,'x-grid3')]</td>
+	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'x-grid3')]</td>
 	<td>newWidth</td>
 </tr>
 <tr>
@@ -90,7 +90,6 @@
 	<td>//div[contains(@class,'b-menu')]/ul/li[2]/a/span</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>
