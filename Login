@@ -17,6 +17,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td></td>
+	<td>200</td>
+</tr>
+<tr>
 	<td>waitForTextPresent</td>
 	<td>Sign In</td>
 	<td></td>

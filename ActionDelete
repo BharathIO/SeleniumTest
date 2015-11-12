@@ -13,11 +13,6 @@
 </thead><tbody>
 <!--Employees Grid-->
 <tr>
-	<td>click</td>
-	<td>//button[contains(text(),'Refresh')]</td>
-	<td></td>
-</tr>
-<tr>
 	<td>pause</td>
 	<td></td>
 	<td>2000</td>
@@ -38,6 +33,12 @@
 	<td>200</td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>//div[contains(@class,'x-grid3')]/div[2]/table/tbody/tr/td[3]</td>
+	<td></td>
+</tr>
+<!--click on 3rd record-->
+<tr>
 	<td>click</td>
 	<td>//div[contains(@class,'x-grid3')]/div[2]/table/tbody/tr/td[3]</td>
 	<td></td>
@@ -49,7 +50,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>//div[contains(@class,'x-grid3')]/div[3]/table/tbody/tr/td[3]</td>
+	<td>//button[contains(text(),'ActionDelete')]</td>
 	<td></td>
 </tr>
 <tr>
@@ -79,7 +80,7 @@
 </tr>
 <tr>
 	<td>assertExpression</td>
-	<td>javascript{storedVars['newcount'] != storedVars['count'] }</td>
+	<td>javascript{storedVars['newcount'] == storedVars['count'] -1}</td>
 	<td>true</td>
 </tr>
 <tr>
@@ -87,7 +88,7 @@
 	<td>//button[contains(text(),'Refresh')]</td>
 	<td></td>
 </tr>
-<tr>
+<!--<tr>
 	<td>pause</td>
 	<td></td>
 	<td>200</td>
@@ -95,11 +96,11 @@
 <tr>
 	<td>storeXpathCount</td>
 	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'x-grid3')]/div[contains(@class,'x-grid3-body')]/div[contains(@class,'x-grid3-row')]</td>
-	<td>count</td>
+	<td>refreshcount</td>
 </tr>
 <tr>
 	<td>echo</td>
-	<td>${count}</td>
+	<td>${refreshcount}</td>
 	<td></td>
 </tr>
 <tr>
@@ -108,9 +109,9 @@
 	<td>200</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-main')]//div[contains(@id,'c-78c99b836b4f487c92110f263d6ef68c-empGrid')]//div[contains(@class,'ra-grid-header')]/div/table/tbody/tr/td[4]/table/tbody/tr[2]/td[2]/em/button</td>
-	<td></td>
+	<td>assertExpression</td>
+	<td>javascript{storedVars['refreshcount'] == storedVars['count']}</td>
+	<td></td> -->
 </tr>
 </tbody></table>
 </body>

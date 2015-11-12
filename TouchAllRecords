@@ -70,12 +70,12 @@
 	<td>200</td>
 	<td></td>
 </tr>
+<!--Discard changes -Yes-->
 <tr>
 	<td>click</td>
 	<td>//button[contains(text(),'Yes')]</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>
