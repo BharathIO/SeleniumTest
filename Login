@@ -30,7 +30,7 @@
 <tr>
 	<td>type</td>
 	<td>id=username-input</td>
-	<td>bharath</td>
+	<td>bharaths</td>
 </tr>
 <tr>
 	<td>type</td>
