@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qa.cloudio.io:8082/" />
+<title>Login</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">LoginD</td></tr>
+</thead><tbody>
+
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>File</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//a[contains(text(),'ile')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//div[contains(@class,'b-menu')]//ul//li[17]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//*[contains(@class,'b-menu-list')]//li[22]//a//span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='platformStatus']//div[contains(@class,'ui-content')]//ul[1]/li[7]//span</td>
+	<td>buildVersion</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${buildVersion}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
