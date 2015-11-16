@@ -52,6 +52,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='platformStatus']//div[contains(@class,'ui-content')]//ul[1]/li[7]//span</td>
+	<td></td>
+</tr>
+<tr>
 	<td>storeText</td>
 	<td>//div[@id='platformStatus']//div[contains(@class,'ui-content')]//ul[1]/li[7]//span</td>
 	<td>buildVersion</td>
