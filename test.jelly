@@ -1,0 +1,115 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define">
+    
+    <html>
+    <head>
+        <style data-inline="true">
+            body table,
+            td,
+            th,
+            p
+             {               
+                font: normal normal 110% Georgia, Serif; 	   	
+			    background-color: #f0f0f0;
+			    margin-left: 40px;
+			    margin-top: 2px;
+			    width:50%;
+	            }
+            h1,
+            h2 {
+                border-bottom: dotted 1px #999999;
+                padding: 5px;               
+                color: #000000;
+                font: normal bold 140% Georgia, Serif;
+                background-color: #f0f0f0;
+                font-style: italic;
+            }
+            tr.status_passed td {
+                background-color: #ccffcc;
+            }
+            tr.status_failed td {
+                background-color: #ffcccc;
+            }
+            a {
+                text-decoration: none;
+            }
+        </style>
+
+
+    </head>
+
+    <body>
+        <div class="header">
+            <j:set var="spc" value="&amp;nbsp;&amp;nbsp;" />
+            <!-- GENERAL INFO -->
+            <!-- HEADER -->
+            <table class="head-wrap" bgcolor="#999999">
+                <tr>
+                    <td></td>
+                    <td class="header container">
+                        <div class="content">
+                            <table bgcolor="#999999">
+                                <tr>
+                                    <td>
+                                        <img src="http://jenkins-ci.org/sites/default/files/jenkins_logo.png" width="200" height="50" />
+                                    </td>
+                                    <td align="right" style="padding-left:30px;">
+                                        <h4 class="collapse">${project.name}</h4>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+            <!-- /HEADER -->
+
+            <table>
+                <tr class="gray">
+                    <td align="right">
+                    </td>
+                    <td valign="center">
+                        <b style="font-size:200%;">BUILD ${build.result}</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Build URL</td>
+                    <td>
+                        <a href="${rooturl}${build.url}">${rooturl}${build.url}</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Project:</td>
+                    <td>${project.name}</td>
+                </tr>
+                <tr>
+                    <td>Date of build:</td>
+                    <td>${it.timestampString}</td>
+                </tr>
+                <tr>
+                    <td>Build duration:</td>
+                    <td>${build.durationString}</td>
+                </tr>
+                <tr>
+                    <td>Build cause:</td>
+                    <td>
+                        <j:forEach var="cause" items="${build.causes}">${cause.shortDescription} </j:forEach>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Built on:</td>
+                    <td>
+                        <j:choose>
+                            <j:when test="${build.builtOnStr!=''}">${build.builtOnStr}</j:when>
+                            <j:otherwise>master</j:otherwise>
+                        </j:choose>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+
+    </html>
+</j:jelly>

@@ -12,6 +12,21 @@
 </thead><tbody>
 
 <tr>
+	<td>waitForElementPresent</td>
+	<td>//head/link[contains(@href,'resource3/gxt/css/gxt-all.css')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//head/link[contains(@href,'resource3/gxt/css/gxt-all.css')]</td>
+	<td>build</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${build}</td>
+	<td></td>
+</tr>
+<tr>
 	<td>pause</td>
 	<td>2000</td>
 	<td></td>

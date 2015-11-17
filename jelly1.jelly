@@ -1,0 +1,44 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler"
+xmlns:d="jelly:define">
+<BODY>
+<j:set var="spc" value="&amp;nbsp;&amp;nbsp;" />
+
+<!-- GENERAL INFO -->
+
+
+$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
+
+<br /><iframe src="http://www.w3schools.com"; width="200"
+height="200"><p>you should have seen my other page here, but something
+broke.</p></iframe>
+
+<br />Check console output at $BUILD_URL to view the results.
+
+<br />Failed tests: ${FAILED_TESTS}
+
+<!-- here is some extra stuff that could be used -->
+<TABLE>
+  <TR><TD align="right">
+    <j:choose>
+      <j:when test="${build.result=='SUCCESS'}">
+        <IMG SRC="${rooturl}static/e59dfe28/images/32x32/blue.gif" />
+      </j:when>
+          <j:when test="${build.result=='FAILURE'}">
+        <IMG SRC="${rooturl}static/e59dfe28/images/32x32/red.gif" />
+      </j:when>
+      <j:otherwise>
+        <IMG SRC="${rooturl}static/e59dfe28/images/32x32/yellow.gif" />
+      </j:otherwise>
+    </j:choose>
+  </TD><TD valign="center"><B style="font-size: 200%;">BUILD
+${build.result}</B></TD></TR>
+  <TR><TD>Build URL</TD><TD><A
+href="${rooturl}${build.url}">${rooturl}${build.url}</A></TD></TR>
+  <TR><TD>Project:</TD><TD>${project.name}</TD></TR>
+  <TR><TD>Date of build:</TD><TD>${it.timestampString}</TD></TR>
+  <TR><TD>Build duration:</TD><TD>${build.durationString}</TD></TR>
+</TABLE>
+<BR/>
+
+</BODY>
+</j:jelly>
